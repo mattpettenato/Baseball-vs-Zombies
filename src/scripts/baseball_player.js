@@ -1,3 +1,6 @@
+const board = document.getElementById('board');
+const ctx = board.getContext('2d');
+
 export default class BaseballPlayer {
   constructor(x, y){
     this.x = x;

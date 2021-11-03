@@ -13,6 +13,7 @@ export default class Game {
     this.towerToken = 3;
     this.round = 1;
     this.numZombie = 2;
+    this.lives = 5;
     // this.oldNumZom = numZombie;
     this.frame = 0
     this.populate = this.board.populateGrid();
@@ -29,30 +30,45 @@ export default class Game {
   ctx.fillText("Round: " + this.round, 300, 75)
   }
 
+  drawLives() {
+    ctx.fillStyle = 'red';
+    ctx.font = "25px Arial";
+    ctx.textAlign = "start";
+    ctx.fillText("Lives: " + this.lives, 700, 75)
+  }
+
   // that = this
   roundOver() {
     this.round = this.round + 1;
-    // this.numZombie = this.round * 2;
+    this.numZombie = this.round * 4;
     this.towerToken = this.towerToken + 1;
-    this.speedChange + 2;
+    // this.speedChange + 2;
     // this.newRound()
   }
 
-  newRound(){
-    this.numZombie = this.round * 2;
-    // console.log('waiting...')
+  // this.zombie.zombies.splice(i, 1)
+  stillZom() {
+    for (let i = 0; i < this.zombie.zombies.length; i++) {
+      // console.log(this.zombie.zombies[0]['x'])
+      // console.log(this.zombie.zombies[1]['x'])
+      // console.log(this.zombie.zombies)
+      if (this.zombie.zombies[0]['x'] < 100) {
+        // console.log('test')
+        this.lives -= 1;
+        this.zombie.zombies.splice(i, 1);
+        
+        // console.log(this.zombie.zombies)
+      }
+    }
   }
-  // setTimeout(this.roundOver.bind(this), 4000);
 
 
+  newRound() {
+    this.numZombie = this.round * 2;
+
+  }
 
 
-
-
-
-  setTimeout(){ 
-    this.roundOver(); 
-  } 3000;
 
   drawCell(ctx) {
     // console.log(ctx)
@@ -78,20 +94,19 @@ export default class Game {
       if (this.numZombie > 0) {
         this.zombie.zombies.push(new Zombie(y))
         this.numZombie = this.numZombie - 1;
-        // console.log(zombies.length)
         // console.log(this.movement)
       }
     }
   }
-  // function collisionDetection(rect1, rect2) {
-//   if (!(rect1.x > rect2.x + rect2.width ||
-//     rect1.x + rect1.width < rect2.x ||
-//     rect1.y > rect2.y + rect2.height ||
-//     rect1.y + rect1.height < rect2.y))
-//     {
-//       return true;
-//     }
-// }
+collisionDetection(rect1, rect2) {
+  if (!(rect1.x > rect2.x + rect2.width ||
+    rect1.x + rect1.width < rect2.x ||
+    rect1.y > rect2.y + rect2.height ||
+    rect1.y + rect1.height < rect2.y))
+    {
+      return true;
+    }
+}
 
 
 }

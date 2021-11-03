@@ -10,7 +10,7 @@ export default class Zombie {
     this.height = 100;
     this.health = 50;
     this.speed = Math.random() * speedChange + 0.2;
-    this.movement = this.speed;
+    this.movement = 1;//this.speed;
     this.zombies = []
   }
   moveZombie(){
