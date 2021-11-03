@@ -1,0 +1,29 @@
+body {
+  background: grey;
+}
+
+/* #outerboard {
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  margin: 0 auto;
+  width: 1000px;
+  height: 70px;
+  border-style: solid;
+} */
+
+#board {
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  margin: 0 auto;
+  width: 1000px;
+  height: 700px;
+  /* border-style: solid; */
+}
