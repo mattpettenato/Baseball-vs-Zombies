@@ -1,3 +1,5 @@
+import Projectile from './projectile.js'
+
 const board = document.getElementById('board');
 const ctx = board.getContext("2d");
 const speedChange = 0.3
@@ -10,7 +12,7 @@ export default class Zombie {
     this.height = 100;
     this.health = 50;
     this.speed = Math.random() * speedChange + 0.2;
-    this.movement = 1;//this.speed;
+    this.movement = this.speed;
     this.zombies = []
   }
   moveZombie(){
@@ -23,10 +25,7 @@ export default class Zombie {
     ctx.font = "12px Arial";
     ctx.textAlign = "start";
     ctx.fillText(this.health + ' hp', this.x, this.y + 10);
-    // console.log(this.movement)
   }
-
-  // drawEnemy();
 }
 
 
