@@ -49,8 +49,8 @@ var myVar;
 function animate() {
   ctx.clearRect(0, 0, board.width, board.height);
   ctx.fillStyle = "rgb(214 162	71)";
-  // ctx.fillRect(0, 0, 1000, 99);
-  // ctx.fillRect(0, 601, 1000, 100);
+  ctx.fillRect(0, 0, 1000, 99);
+  ctx.fillRect(0, 601, 1000, 100);
   newGame.drawCell(ctx);
   newGame.board.drawTitle();
   newGame.drawRound();
@@ -59,7 +59,11 @@ function animate() {
   newGame.stillZom();
   newGame.drawLives();
   newGame.drawBall();
-  newGame.ballHit();~
+  newGame.drawScore();
+  // newGame.getZomPos();
+  // newGame.getBallPos();
+  newGame.ballHit();
+  // newGame.getPos();
   // newGame.stillBall();
   // console.log(newGame.ball.projectiles)
   newGame.frame++;
@@ -69,7 +73,7 @@ function animate() {
     requestAnimationFrame(animate);
   } else {
     cancelAnimationFrame(animate);
-    // newGame.restartGame();
+    newGame.restartGame();
     // requestAnimationFrame(animate);
     console.log('done')
     // alert("Ran out of lives. You lost! Refresh page (F5) to play again.");

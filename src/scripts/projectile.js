@@ -7,7 +7,7 @@ export default class Projectile {
     this.y = y;
     this.width = 10;
     this.color = "grey";
-    this.speed = 7;
+    this.speed = 10;
     // this.projectiles = [];
   }
 

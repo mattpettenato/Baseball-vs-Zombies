@@ -2,7 +2,7 @@ import Projectile from './projectile.js'
 
 const board = document.getElementById('board');
 const ctx = board.getContext("2d");
-const speedChange = 0.3
+// const speedChange = 0.3
 
 export default class Zombie {
   constructor(y){
@@ -11,8 +11,9 @@ export default class Zombie {
     this.width = 100;
     this.height = 100;
     this.health = 50;
-    this.speed = Math.random() * speedChange + 0.2;
-    this.movement = this.speed;
+    this.speedChange = 0.8
+    this.speed = Math.random() * this.speedChange + 0.2;
+    this.movement = 0.9//this.speed;
     this.zombies = []
   }
   moveZombie(){
