@@ -73,6 +73,8 @@ export default class Game {
       if (this.zombie.zombies[i]['x'] < 100) {
         this.lives -= 1;
         this.zombie.zombies.splice(i, 1);
+        // this.zombie.zombies[i].movement = 0
+        // this.zombie.zombies[i].y = 1500
       }      
     }
   }
@@ -91,7 +93,7 @@ export default class Game {
   drawCell(ctx) {
     ctx.fillStyle = ('red');
     ctx.font = "25px Arial";
-    ctx.textAlign = "start";
+    // ctx.textAlign = "start";
     ctx.fillText(this.towerToken + " tower tokens", 100, 90);
     ctx.fillText(this.numZombie + " zombies left", 500, 90);
     for (let i = 0; i < this.board.unitData.length; i++) {
@@ -144,25 +146,6 @@ export default class Game {
     }
   }
 
-//   ballHit() {
-//     if (this.projectiles.length > 0) {
-//       // console.log(this.projectiles[0].x)
-//       // console.log(this.projectiles[0].y)
-//       if (this.zombie.zombies.length > 0) {
-//         for (let x = 100; x < 1000; x += 100) {
-//           console.log(this.zombie.zombies)
-//       }
-//       if ((this.projectiles[0].x === this.zombie.zombies[0].x)){}
-//     }
-//   //   for (let i = 0; i < this.projectiles.length; i++) {
-
-//     // console.log(this.projectiles[i])
-//     // this.projectiles[i].drawBaseball();
-//     // this.projectiles[i].moveBall();
-//   // }
-// }
-//   }
-  // if(this.projectiles.length > 0) { }
   getZomPos() {
     if (this.zombie.zombies.length > 0) {
       for (let i = 0; i < this.zombie.zombies.length; i++) {
@@ -180,9 +163,6 @@ export default class Game {
       }
     }
   }
-    // for (let y = 100; y < 700; y += 100) {
-    //   for (let x = 100; x < 1000; x += 25) {
-    //     console.log((x, y))
 
 
   ballHit() {
@@ -204,8 +184,8 @@ export default class Game {
             // console.log(this.zombie.zombies[i].health)
             if (this.zombie.zombies[i].health <= 0) {
               this.zombie.zombies[i].movement = 0
-              this.zombie.zombies[i].y = 1500
-              // this.zombie.zombies.splice(i, 1);
+              // this.zombie.zombies[i].y = 1500
+              this.zombie.zombies.splice(i, 1);
               this.score++
             }
           }
