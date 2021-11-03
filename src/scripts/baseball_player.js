@@ -9,7 +9,7 @@ export default class BaseballPlayer {
     this.x = x;
     this.y = y;
     // this.game = new Game();
-    this.ball = new Projectile();
+    // this.ball = new Projectile();
     this.width = 100;
     this.height = 100;
     this.health = 100;

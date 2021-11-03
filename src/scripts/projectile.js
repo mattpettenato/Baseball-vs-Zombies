@@ -8,16 +8,19 @@ export default class Projectile {
     this.width = 10;
     this.color = "grey";
     this.speed = 7;
-    this.projectiles = [];
+    // this.projectiles = [];
   }
+
+  moveBall() {
+    this.x += this.speed
+  }
+
   drawBaseball(){
     ctx.beginPath();
     ctx.arc(this.x + 100, this.y + 50, this.width, 0, 2 * Math.PI);
     ctx.fillStyle = this.color
     ctx.fill();
   }
-  moveBall(){
-    this.x += this.speed
-  }
+
 
 }

@@ -16,6 +16,9 @@ export default class Game {
     this.round = 1;
     this.numZombie = 2;
     this.lives = 5;
+    this.projectiles = [];
+    this.numBalls = 0
+    // this.numBalls = this.player.team.length;
     // this.oldNumZom = numZombie;
     this.frame = 0
     this.populate = this.board.populateGrid();
@@ -65,6 +68,17 @@ export default class Game {
     }
   }
 
+  stillBall() {
+    console.log(this.projectiles)
+    for (let i = 0; i < this.projectiles.length; i++) {
+      // console.log(this.projectiles[0]['x'])
+      if (this.projectiles[0]['x'] > 820) {
+        this.projectiles.splice(i, 1);
+      }
+
+    }
+  }
+
   drawCell(ctx) {
     ctx.fillStyle = ('red');
     ctx.font = "25px Arial";
@@ -81,7 +95,7 @@ export default class Game {
       this.zombie.zombies[i].moveZombie();
       this.zombie.zombies[i].drawZombie();
     }
-    if (this.frame % 100 === 0) {
+    if (this.frame % 300 === 0) {
       let y = Math.floor(Math.random() * 5 + 1) * 100;
       if (this.numZombie > 0) {
         this.zombie.zombies.push(new Zombie(y))
@@ -94,21 +108,44 @@ export default class Game {
   drawTeam() {
     for (let i = 0; i < this.player.team.length; i++) {
       this.player.team[i].drawPlayer();
+
+      // console.log(this.player.team.length)
       // console.log(this.player.team[i].x, this.player.team[i].y)
       // this.drawBall(this.player.team[i].x, this.player.team[i].y);
-      this.ball.projectiles.push(new Projectile(this.player.team[i].x, this.player.team[i].y))
+      // console.log(this.numBalls)
+      if (this.frame % 100 === 0) {
+      // if ((this.numBalls > 0) && (this.numBalls <= this.player.team.length)) {
+        this.numBalls = this.numBalls + 1;
+        this.projectiles.push(new Projectile(this.player.team[i].x, this.player.team[i].y))
+        console.log(this.projectiles)
+
+      }
+      // this.projectiles.push(new Projectile(this.player.team[i].y))
     }
   }
 
-  drawBall(x, y) {
-    // console.log(x)
-    if (this.ball.projectiles.length > 0) {
-      for (let i = 0; i < this.ball.projectiles.length; i++) {
-        this.ball.projectiles[i].drawBaseball();
-        this.ball.projectiles[i].moveBall();
+  drawBall() {
+    
+    if (this.projectiles.length > 0) {
+      this.stillBall();
+      for (let i = 0; i < this.projectiles.length; i++) {
+        // console.log(this.projectiles[i])
+        this.projectiles[i].drawBaseball();
+        this.projectiles[i].moveBall();
       }
     }
   }
+
+  ballHit() {
+    
+  }
+
+  // drawBaseball() {
+  //   ctx.beginPath();
+  //   ctx.arc(100, this.y + 50, this.width, 0, 2 * Math.PI);
+  //   ctx.fillStyle = this.color
+  //   ctx.fill();
+  // }
 
   // drawBall() {
   //   // console.log(this.zombie.zombies[0]['y'])

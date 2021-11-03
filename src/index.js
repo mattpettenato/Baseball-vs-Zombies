@@ -59,6 +59,8 @@ function animate() {
   newGame.stillZom();
   newGame.drawLives();
   newGame.drawBall();
+  newGame.ballHit();~
+  // newGame.stillBall();
   // console.log(newGame.ball.projectiles)
   newGame.frame++;
   // console.log(newGame.zombie.zombies)
