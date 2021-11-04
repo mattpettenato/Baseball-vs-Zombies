@@ -1,18 +1,20 @@
 import BaseballPlayer from './scripts/baseball_player.js';
 import Game from './scripts/game.js';
 
-const board = document.getElementById('board');
-const ctx = board.getContext('2d');
-
-const canvas1 = document.getElementById('canvas1');
-const ctx1 = board.getContext('2d');
 
 
-const newGame = new Game();
-let gameState = true;
 
-document.addEventListener('load', function() {
 
+
+document.addEventListener('DOMContentLoaded', function() {
+  const board = document.getElementById('board');
+  const ctx = board.getContext('2d');
+
+  const canvas1 = document.getElementById('canvas1');
+  const ctx1 = board.getContext('2d');
+
+  const newGame = new Game();
+  let gameState = true;
 
 board.addEventListener('click', function(event) {
   const xPos = newGame.board.mouse['x'] - (newGame.board.mouse['x'] % newGame.board.unitSize);
