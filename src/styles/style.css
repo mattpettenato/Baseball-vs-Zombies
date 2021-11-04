@@ -94,7 +94,7 @@ body {
 
 #board {
   /* background-color:honeydew ; */
-  background-image: url(https://github.com/mattpettenato/JavaScript_Project-Baseball-vs.-Zombies/blob/b63383e99c05af2ebc6ff0f9fa140de109e78392/testmap.png);
+  background-image: url(testmap.png);
   position: absolute;
   top: 50px;
   bottom: 50px;
