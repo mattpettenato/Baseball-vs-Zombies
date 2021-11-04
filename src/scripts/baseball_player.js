@@ -1,4 +1,4 @@
-import Projectile from './projectile.js'
+// import Projectile from './projectile.js'
 // import Game from './game.js';
 
 const board = document.getElementById('board');
@@ -12,7 +12,7 @@ export default class BaseballPlayer {
     // this.ball = new Projectile();
     this.width = 100;
     this.height = 100;
-    this.health = 100;
+    this.health = 1000;
     this.team = [];
     // this.balls = [];
   }
@@ -22,7 +22,7 @@ export default class BaseballPlayer {
     ctx.fillStyle = ('red');
     ctx.font = "12px Arial";
     ctx.textAlign = "start";
-    ctx.fillText(this.health, this.x, this.y + 10);
+    ctx.fillText(this.health, this.x, this.y + 20);
   }
   // drawTeam() {
   //   for (let i = 0; i < this.team.length; i++) {

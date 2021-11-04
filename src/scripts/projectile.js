@@ -16,6 +16,7 @@ export default class Projectile {
   }
 
   drawBaseball(){
+    ctx.clearArc
     ctx.beginPath();
     ctx.arc(this.x + 100, this.y + 50, this.width, 0, 2 * Math.PI);
     ctx.fillStyle = this.color
