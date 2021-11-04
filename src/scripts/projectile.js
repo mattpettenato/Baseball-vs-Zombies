@@ -1,5 +1,5 @@
 const THEBALL = new Image()
-THEBALL.src = 'ball.png'
+THEBALL.src = './ball.png'
 
 const board = document.getElementById('board');
 const ctx = board.getContext('2d');

@@ -1,5 +1,5 @@
 const BASEBALLPLAYER = new Image()
-BASEBALLPLAYER.src = '../testplayer3.jpg'
+BASEBALLPLAYER.src = './testplayer3.jpg'
 
 const board = document.getElementById('board');
 const ctx = board.getContext('2d');

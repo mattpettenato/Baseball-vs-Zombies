@@ -1,6 +1,6 @@
 // import Projectile from './projectile.js'
 const ZOM = new Image()
-ZOM.src = 'zombie.png'
+ZOM.src = './zombie.png'
 
 const board = document.getElementById('board');
 const ctx = board.getContext("2d");
