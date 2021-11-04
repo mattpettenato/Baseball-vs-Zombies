@@ -1,3 +1,4 @@
+
 const board = document.getElementById('board');
 const ctx = board.getContext('2d');
 

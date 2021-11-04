@@ -1,5 +1,5 @@
 body {
-  background-color: grey;
+  background-color: indianred;
 }
 
 /* #canvas2 {
@@ -14,6 +14,10 @@ body {
   margin:auto;
   text-align:center;
 } */
+/* #canvas4 {
+  
+} */
+
 #canvas2 {
   background-color: indianred ;
   position: absolute;
@@ -41,7 +45,8 @@ body {
 }
 
 #board {
-  background-color:honeydew ;
+  /* background-color:honeydew ; */
+  background-image: url(/img/testmap.png);
   position: absolute;
   top: 50px;
   bottom: 50px;
@@ -52,3 +57,5 @@ body {
   height: 700px;
   text-align:center;
 }
+
+
