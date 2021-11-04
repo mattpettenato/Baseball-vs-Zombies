@@ -24,7 +24,7 @@ export default class Zombie {
     ctx.fillStyle = 'red';
     ctx.fillRect(this.x, this.y, this.width, this.height);
     ctx.fillStyle = 'blue';
-    ctx.font = "12px Arial";
+    ctx.font = "12px Courier";
     ctx.textAlign = "start";
     ctx.fillText(this.health + ' hp', this.x, this.y + 10);
   }

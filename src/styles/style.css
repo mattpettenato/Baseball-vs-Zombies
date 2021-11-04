@@ -1,29 +1,54 @@
 body {
-  background: grey;
+  background-color: grey;
 }
 
-/* #outerboard {
-  background: white;
+/* #canvas2 {
+  background-color: indianred ;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: block;
-  margin: 0 auto;
+  top: 1000px;
+  bottom: 0;
+  left: 0;
+  right: 0;
   width: 1000px;
-  height: 70px;
-  border-style: solid;
+  height: 200px;
+  margin:auto;
+  text-align:center;
 } */
+#canvas2 {
+  background-color: indianred ;
+  position: absolute;
+  top: 50px;
+  bottom: 50px;
+  left: 1203px;
+  right: 0px;
+  width: 200px;
+  height: 700px;
+  margin:auto;
+  text-align:center;
+}
+
+#canvas3 {
+  background-color: indianred ;
+  position: absolute;
+  top: 50px;
+  bottom: 50px;
+  left: 0px;
+  right: 1203px;
+  width: 200px;
+  height: 700px;
+  margin:auto;
+  text-align:center;
+}
 
 #board {
-  background: white;
+  background-color:honeydew ;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: block;
-  margin: 0 auto;
+  top: 50px;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  margin:auto;
   width: 1000px;
   height: 700px;
-  /* border-style: solid; */
+  text-align:center;
 }

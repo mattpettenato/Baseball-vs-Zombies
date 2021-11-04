@@ -23,7 +23,7 @@ export default class Board {
   drawGrid(ctx) {
     ctx.strokeStyle = this.color;
     ctx.strokeRect(this.x, this.y, 100, 100);
-    ctx.font = "12px Arial";
+    ctx.font = "12px Courier";
   }
 
   populateGrid() {
@@ -34,10 +34,5 @@ export default class Board {
     }
   }
 
-  drawTitle(){
-    ctx.fillStyle = ('blue');
-    ctx.font = "30px Arial";
-    ctx.textAlign = "start";
-    ctx.fillText('Baseball vs. Zombies', 300, 60);
-  }
+  
   }

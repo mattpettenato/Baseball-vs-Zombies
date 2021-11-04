@@ -37,7 +37,7 @@ export default class Game {
   //test
   drawRound() {
   ctx.fillStyle = 'red';
-  ctx.font = "25px Arial";
+  ctx.font = "22px Courier";
   ctx.textAlign = "start";
   ctx.fillText("Round: " + this.round, 300, 90)
   }
@@ -45,16 +45,16 @@ export default class Game {
   drawScore(){
     // console.log(test);
     ctx.fillStyle = 'red';
-    ctx.font = "25px Arial";
+    ctx.font = "22px Courier";
     ctx.textAlign = "start";
-    ctx.fillText("Score: " + this.score, 800, 90)
+    ctx.fillText("Score: " + this.score, 800, 650)
   }
 
   drawLives() {
     ctx.fillStyle = 'red';
-    ctx.font = "25px Arial";
+    ctx.font = "22px Courier";
     ctx.textAlign = "start";
-    ctx.fillText("Lives: " + this.lives, 700, 90)
+    ctx.fillText("Lives: " + this.lives, 500, 650)
     // console.log(this.lives)
   }
 
@@ -110,12 +110,25 @@ export default class Game {
     }
   }
 
+  drawTitle() {
+    ctx.fillStyle = ('blue');
+    ctx.font = "30px Courier";
+    ctx.textAlign = "start";
+    ctx.fillText('Baseball vs. Zombies', 320, 60);
+  }
+
   drawCell(ctx) {
     ctx.fillStyle = ('red');
-    ctx.font = "25px Arial";
-    ctx.fillText(this.towerToken + " tower tokens", 100, 90);
-    ctx.fillText(this.numZombie + " zombies left", 500, 90);
-    ctx.fillText(this.zombies.length + " zombies arr", 700, 50);
+    ctx.font = "25px Courier";
+    ctx.fillText("Baseball", 100, 650);
+    ctx.fillText("Cards: " + this.towerToken, 100, 670);
+    ctx.fillText("Incoming", 300, 650);
+    ctx.fillText("Zombies: " + this.numZombie, 300, 670);
+    ctx.fillText("Lives: " + this.lives, 500, 650)
+    ctx.fillText("Score: " + this.score, 700, 650)
+    ctx.fillText("Round: " + this.round, 440, 90)
+
+    // ctx.fillText(this.zombies.length + " zombies arr", 700, 50);
     for (let i = 0; i < this.board.unitData.length; i++) {
       this.board.unitData[i].drawGrid(ctx);
     }

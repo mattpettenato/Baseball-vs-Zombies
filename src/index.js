@@ -39,14 +39,14 @@ function animate() {
   if (gameState === true) {
     ctx.clearRect(0, 0, board.width, board.height);
     newGame.drawCell(ctx);
-    newGame.board.drawTitle();
-    newGame.drawRound();
+    newGame.drawTitle();
+    // newGame.drawRound();
     newGame.drawTeam();
     newGame.drawEnemy();
     newGame.stillZom();
-    newGame.drawLives();
+    // newGame.drawLives();
     newGame.drawBall();
-    newGame.drawScore();
+    // newGame.drawScore();
     newGame.playerHit();
     newGame.checkZom();
     newGame.checkPlayer();
