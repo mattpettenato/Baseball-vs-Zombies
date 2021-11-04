@@ -196,7 +196,7 @@ export default class Game {
       for (let i = 0; i < this.zombies.length; i++) {
         for (let j = 0; j < this.projectiles.length; j++) {
           if (this.zombies[i] && this.projectiles[j]) {
-            if ((this.projectiles[j].x >= this.zombies[i].x - 100) && (this.projectiles[j].y === this.zombies[i].y)) {
+            if ((this.projectiles[j].x >= this.zombies[i].x - 5) && (this.projectiles[j].y === this.zombies[i].y)) {
               this.zombies[i].health -= 10
               this.projectiles.splice(j, 1)
               if ((this.zombies[i]) && (this.zombies[i].health <= 0)) {

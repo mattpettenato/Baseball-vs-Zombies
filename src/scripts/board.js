@@ -22,7 +22,7 @@ export default class Board {
   }
   drawGrid(ctx) {
     ctx.strokeStyle = this.color;
-    ctx.strokeRect(this.x, this.y, 100, 100);
+    // ctx.strokeRect(this.x, this.y, 100, 100);
     ctx.font = "12px Courier";
   }
 

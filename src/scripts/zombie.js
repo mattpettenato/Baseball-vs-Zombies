@@ -1,4 +1,6 @@
-import Projectile from './projectile.js'
+// import Projectile from './projectile.js'
+const ZOM = new Image()
+ZOM.src = '/img/zombie.png'
 
 const board = document.getElementById('board');
 const ctx = board.getContext("2d");
@@ -21,12 +23,14 @@ export default class Zombie {
   }
 
   drawZombie() {
+    // ctx.fillStyle = 'red';
+    // ctx.fillRect(this.x, this.y, this.width, this.height);
     ctx.fillStyle = 'red';
-    ctx.fillRect(this.x, this.y, this.width, this.height);
-    ctx.fillStyle = 'blue';
     ctx.font = "12px Courier";
-    ctx.textAlign = "start";
+    // ctx.textAlign = "start";
     ctx.fillText(this.health + ' hp', this.x, this.y + 10);
+    ctx.drawImage(ZOM, this.x - 35, this.y, 100, 100)
+
   }
 }
 
