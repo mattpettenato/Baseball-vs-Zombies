@@ -84,7 +84,7 @@ const btn1 = document.getElementById('btn1');
 const btn2 = document.getElementById('btn2');
 
 let song = new Audio();
-song.src = './music/song.mp3'
+song.src = 'https://github.com/mattpettenato/JavaScript_Project-Baseball-vs.-Zombies/blob/main/song.mp3'
 btn1.addEventListener('click', function(){
   song.volume = 0.05
   song.play();
