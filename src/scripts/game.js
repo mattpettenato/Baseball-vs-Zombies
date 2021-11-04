@@ -69,11 +69,9 @@ export default class Game {
   roundOver() {
 
       this.round = this.round + 1;
-      this.numZombie = this.round * 3;
+      this.numZombie = this.round * 4;
       this.towerToken = this.towerToken + 1;
-    // await delay(3000);
-
-    // this.zombie.movement + 5;
+      this.zombie.increaseSpeed();
   }
 
   restartGame(){
@@ -145,11 +143,9 @@ export default class Game {
   drawTeam() {
     for (let i = 0; i < this.player.team.length; i++) {
       this.player.team[i].drawPlayer();
-      if (true) {
+      if (this.frame % 100 === 0) {
         this.numBalls = this.numBalls + 1;
-        // console.log(this.projectiles.length)
         this.projectiles.push(new Projectile(this.player.team[i].x, this.player.team[i].y))
-        // this.deadprojectiles.push(this.projectiles[this.projectiles.length - 1])
       }
     }
   }
@@ -234,9 +230,6 @@ export default class Game {
       for (let i = 0; i < this.zombies.length; i++) {
         for (let j = 0; j < this.player.team.length; j++) {
           if (this.zombies[i] && this.player.team[j]) {
-            // console.log(this.player.team[j].y)
-            // console.log(this.zombies[i].movement)
-            // console.log(this.player.team)
           if (this.player.team[j] && this.zombies[i] && (this.player.team[j].x + 100 < this.zombies[i].x) && (this.player.team[j].y === this.zombies[i].y)) {
             for (let k = 1; k < this.player.team.length; k++)
               if (((this.zombies[i].movement === 0) && (this.player.team[j].y === this.player.team[k].y)) && (((this.player.team[j].x - this.player.team[k].x) === 100) && ((this.player.team[j].x - this.player.team[k].x) === -100))) {
@@ -245,10 +238,6 @@ export default class Game {
           }
         }
           }
-            // this.zombie.zombies[i].movement = 0
-            // this.player.team[j].health = this.player.team[j].health - 0.25
-            // if ((this.player.team[j].health <= 0)) {
-            //   this.player.team.splice(j, 1);
           }
         }
       }

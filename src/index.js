@@ -57,9 +57,6 @@ function animate() {
     newGame.playerHit();
     newGame.checkZom();
     newGame.checkPlayer();
-    // console.log(newGame.player.team[0])
-    console.log(newGame.player.team)
-    console.log(newGame.zombies)
     newGame.ballHit();
     newGame.frame++;
     if (newGame.lives > 0) {
