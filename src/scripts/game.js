@@ -75,14 +75,18 @@ export default class Game {
   }
 
   restartGame(){
-    // this.round = 1;
-    // this.numZombie = 2;
-    // this.towerToken = 3;
-    // this.lives = 5;
+    // ctx.clearRect(0, 0, board.width, board.height);
+    this.round = 1;
+    this.numZombie = 2;
+    this.towerToken = 3;
+    this.lives = 5;
     this.zombies = [];
+    // this.zombies.splice(0, this.zombies.length - 1)
     // this.zombie.deadzombies = [];
-    // this.player.team = [];
+    // this.zombies = []
+    this.player.team = [];
     this.ball.projectiles = [];
+    this.zombie.speed1 = 0.8;
 
   }
 

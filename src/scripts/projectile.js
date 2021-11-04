@@ -24,7 +24,7 @@ export default class Projectile {
     // ctx.arc(this.x + 100, this.y + 50, this.width, 0, 2 * Math.PI);
     // ctx.fillStyle = this.color
     // ctx.fill();
-    ctx.drawImage(THEBALL, this.x, this.y + 25, 10, 10)
+    ctx.drawImage(THEBALL, this.x, this.y + 25, 20, 20)
   }
 
 

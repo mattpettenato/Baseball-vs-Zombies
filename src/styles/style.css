@@ -2,21 +2,69 @@ body {
   background-color: indianred;
 }
 
-/* #canvas2 {
-  background-color: indianred ;
+#header {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 30px;
+  font-style: italic;
+  font-weight: bold;
+  color: rgb(42, 82, 142);
+    display: flex;
+  justify-content: center;
+}
+
+#relative{
+  position: relative;
+}
+
+#btn2 {
+  cursor: pointer;
+  /* position: absolute;
+  top: 150px;
+  left: 367px; */
+  position: fixed;
+  /* top: 50%; */
+  /* transform: translate(-50%,-50%); */
+}
+
+#btn1 {
+  cursor: pointer;
+  /* /* position: absolute; */
+  top: 120px;
+  left: 367px; */  
+  /* position: static; */
+  /* top: 50%; */
+  /* left: 60%; */
+  /* transform: translate(-50%,-50%); */
+}
+
+#btn3 {
+  /* cursor: pointer;
   position: absolute;
-  top: 1000px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 1000px;
-  height: 200px;
-  margin:auto;
-  text-align:center;
-} */
-/* #canvas4 {
+  top: 200px;
+  left: 367px; */
+  position: absolute;
+  /* top: 80%; */
+  margin: 0 auto;
+  top: 2000%;
+
+  /* left: 40%; */
+  /* transform: translate(-50%,-50%); */
+}
+
+#git {
+  position: absolute;
+  margin: 0, auto;
+  left: 10%;
+  top: 3000%;
+  transform: translate(-50%, -50%);
+
+
   
-} */
+  /* bottom: 8px;
+  left: 16px; */
+
+}
+
 
 #canvas2 {
   background-color: indianred ;
@@ -52,7 +100,7 @@ body {
   bottom: 50px;
   left: 0;
   right: 0;
-  margin:auto;
+  margin: 0 auto;
   width: 1000px;
   height: 700px;
   text-align:center;

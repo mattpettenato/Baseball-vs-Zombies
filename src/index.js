@@ -36,7 +36,7 @@ board.addEventListener('mousemove', function (event) {
 
 
 function animate() {
-  if (gameState === true) {
+  // if (gameState === true) {
     ctx.clearRect(0, 0, board.width, board.height);
     newGame.drawCell(ctx);
     newGame.drawTitle();
@@ -55,9 +55,12 @@ function animate() {
     if (newGame.lives > 0) {
       requestAnimationFrame(animate);
     } else {
-      gameState = false
-      cancelAnimationFrame(animate);
-      console.log('done')
+      // gameState = false
+      // cancelAnimationFrame(animate);
+      // console.log('done')
+      newGame.restartGame();
+      requestAnimationFrame(animate);
+      // gameState = true;
       // alert("Ran out of lives. You lost! Refresh page (F5) to play again.");
     }
 
@@ -66,5 +69,27 @@ function animate() {
     }
   }
 
-}
+// }
 animate()
+
+const btn1 = document.getElementById('btn1');
+const btn2 = document.getElementById('btn2');
+
+let song = new Audio();
+song.src = '/music/song.mp3'
+btn1.addEventListener('click', function(){
+  song.volume = 0.3
+  song.play();
+  song.addEventListener('ended', function(){
+    song.play();
+    console.log('song ended. restarting')
+  })
+  btn2.addEventListener('click', function(){
+    song.pause();
+  })
+  
+})
+
+btn3.addEventListener('click', function (){
+  newGame.restartGame();
+});

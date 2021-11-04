@@ -23,7 +23,7 @@ export default class BaseballPlayer {
     ctx.font = "12px Courier";
 
     ctx.drawImage(BASEBALLPLAYER, this.x, this.y, 100, 100)
-    ctx.fillText(this.health, this.x, this.y + 20);
+    ctx.fillText(this.health + " hp", this.x, this.y + 10);
   }  
 }
 

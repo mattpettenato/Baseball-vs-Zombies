@@ -13,13 +13,16 @@ export default class Zombie {
     this.width = 100;
     this.height = 100;
     this.health = 50;
-    this.movement = Math.random() * speedChange + 0.4
+    this.speed1 = 0.8
+    this.speed2 = 0.4
+    this.movement = Math.random() * this.speed1 + this.speed2
   }
   moveZombie(){
     this.x -= this.movement
   }
   increaseSpeed() {
-    speedChange += 0.2
+    this.speed1 += 0.2
+    console.log('speed: ' + this.speed1)
   }
 
   drawZombie() {
