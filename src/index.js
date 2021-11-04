@@ -11,6 +11,9 @@ const ctx1 = board.getContext('2d');
 const newGame = new Game();
 let gameState = true;
 
+document.addEventListener('load', function() {
+
+
 board.addEventListener('click', function(event) {
   const xPos = newGame.board.mouse['x'] - (newGame.board.mouse['x'] % newGame.board.unitSize);
   const yPos = newGame.board.mouse['y'] - (newGame.board.mouse['y'] % newGame.board.unitSize);
@@ -101,3 +104,5 @@ btn1.addEventListener('click', function(){
 btn3.addEventListener('click', function (){
   newGame.restartGame();
 });
+
+})
