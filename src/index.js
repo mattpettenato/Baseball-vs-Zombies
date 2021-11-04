@@ -6,7 +6,7 @@ import Game from './scripts/game.js';
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('load', function() {
   const board = document.getElementById('board');
   const ctx = board.getContext('2d');
 
@@ -61,6 +61,7 @@ function animate() {
     newGame.checkPlayer();
     newGame.ballHit();
     newGame.frame++;
+    // console.log('test')
     if (newGame.lives != 0) {
       // requestAnimationFrame(animate);
     } else {
