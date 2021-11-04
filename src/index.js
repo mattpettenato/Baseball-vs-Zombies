@@ -1,5 +1,5 @@
-import BaseballPlayer from './scripts/baseball_player.js';
-import Game from './scripts/game.js';
+import BaseballPlayer from './scripts/baseball_player';
+import Game from './scripts/game';
 
 
 
@@ -105,6 +105,7 @@ btn1.addEventListener('click', function(){
 })
 
 btn3.addEventListener('click', function (){
+  console.log('hello')
   newGame.restartGame();
 });
 
