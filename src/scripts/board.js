@@ -24,8 +24,6 @@ export default class Board {
     ctx.strokeStyle = this.color;
     ctx.strokeRect(this.x, this.y, 100, 100);
     ctx.font = "12px Arial";
-
-    // ctx.fillText(this.x + " " + this.y, this.x, this.y)
   }
 
   populateGrid() {
