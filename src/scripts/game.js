@@ -76,6 +76,7 @@ export default class Game {
   restartGame(){
     // ctx.clearRect(0, 0, board.width, board.height);
     this.round = 1;
+    this.score = 0;
     this.numZombie = 2;
     this.towerToken = 3;
     this.lives = 5;
@@ -147,9 +148,9 @@ export default class Game {
     ctx.fillStyle = ('black');
     ctx.font = "13px Courier";
     ctx.fillText("Click on board to place baseball", 15, 25)
-    ctx.fillText("place baseball player. Can place", 15, 38)
-    ctx.fillText("one extra player per round. Do not", 15, 51)
-    ctx.fillText("let the zombies get to the path.", 15, 64)
+    ctx.fillText("player. You can place one extra", 15, 38)
+    ctx.fillText("player per round. Do not let the", 15, 51)
+    ctx.fillText("zombies get to the path.", 15, 64)
 
 
 

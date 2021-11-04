@@ -1,6 +1,6 @@
 // import Projectile from './projectile.js'
 const ZOM = new Image()
-ZOM.src = '/img/zombie.png'
+ZOM.src = 'zombie.png'
 
 const board = document.getElementById('board');
 const ctx = board.getContext("2d");
@@ -33,7 +33,6 @@ export default class Zombie {
     // ctx.textAlign = "start";
     ctx.fillText(this.health + ' hp', this.x, this.y + 10);
     ctx.drawImage(ZOM, this.x - 35, this.y, 100, 100)
-
   }
 }
 
