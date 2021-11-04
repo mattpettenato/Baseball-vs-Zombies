@@ -57,7 +57,7 @@ function animate() {
     newGame.ballHit();
     newGame.frame++;
     if (newGame.lives != 0) {
-      requestAnimationFrame(animate);
+      // requestAnimationFrame(animate);
     } else {
       // gameState = false
       // cancelAnimationFrame(animate);
@@ -66,13 +66,15 @@ function animate() {
       newGame.restartGame();
       // alert("Ran out of lives. You lost! Refresh page (F5) to play again. Or click through alert.");
       // newGame.lives = 0
-      requestAnimationFrame(animate);
+      // requestAnimationFrame(animate);
       // gameState = true;
     }
 
     if ((newGame.numZombie === 0) && (newGame.zombies.length <= 0) && (newGame.lives > 0)) {
       newGame.roundOver();
     }
+  requestAnimationFrame(animate);
+
   }
 
 // }

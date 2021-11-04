@@ -67,7 +67,6 @@ export default class Game {
   }
 
   roundOver() {
-
       this.round = this.round + 1;
       this.numZombie = this.round * 4;
       this.towerToken = this.towerToken + 1;
@@ -241,8 +240,10 @@ export default class Game {
             this.zombies[i].movement = 0
             this.player.team[j].health -= 5
             if ((this.player.team[j].health <= 0) ) {
-              this.zombies[i].movement = 0.9
+              this.zombies[i].movement = 2
               this.player.team.splice(j, 1);
+              console.log('test')
+              for (let i = 0; i < this.zombies.length; i++) {this.zombies[i].movement = 1.1}
             }
           }
         }
