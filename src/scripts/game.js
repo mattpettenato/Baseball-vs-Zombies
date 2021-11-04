@@ -92,7 +92,7 @@ export default class Game {
 
   stillZom() {
     for (let i = 0; i < this.zombies.length; i++) {
-      if ((this.zombies[i]['x'] < 100) && this.zombies[i]) {
+      if ((this.zombies[i]['x'] <= 100) && this.zombies[i]) {
         this.lives -= 1;
         // this.zombie.zombies[i].movement = 0
         this.zombies.splice(i, 1);
@@ -125,17 +125,35 @@ export default class Game {
     ctx.fillStyle = ('red');
     ctx.font = "25px Courier";
     ctx.fillText("Baseball", 100, 650);
-    ctx.fillText("Cards: " + this.towerToken, 100, 670);
+    ctx.fillText("Players", 100, 670);
+    ctx.fillText("To Place: " + this.towerToken, 100, 693);
     ctx.fillText("Incoming", 300, 650);
     ctx.fillText("Zombies: " + this.numZombie, 300, 670);
     ctx.fillText("Lives: " + this.lives, 500, 650)
-    ctx.fillText("Score: " + this.score, 700, 650)
+    ctx.fillText("Score: " + this.score, 695, 650)
     ctx.fillText("Round: " + this.round, 440, 90)
-
     // ctx.fillText(this.zombies.length + " zombies arr", 700, 50);
     for (let i = 0; i < this.board.unitData.length; i++) {
       this.board.unitData[i].drawGrid(ctx);
     }
+  }
+
+  drawHelp(ctx){
+    ctx.fillStyle = ('white');
+    // ctx.font = "25px Courier";
+    ctx.fillRect(10, 10, 275, 60)
+  }
+
+  drawHelpt(ctx){
+    ctx.fillStyle = ('black');
+    ctx.font = "13px Courier";
+    ctx.fillText("Click on board to place baseball", 15, 25)
+    ctx.fillText("place baseball player. Can place", 15, 38)
+    ctx.fillText("one extra player per round. Do not", 15, 51)
+    ctx.fillText("let the zombies get to the path.", 15, 64)
+
+
+
   }
 
   drawEnemy() {

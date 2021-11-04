@@ -26,6 +26,8 @@ board.addEventListener('click', function(event) {
     console.log('Out of Tower Tokens')
     return;
   }
+  // add click git hub button and add the button img to canvas. then when click is in that region, the link is clicked.
+  // do the same with start music and stop music and restart
 })
 
 const boardPos = board.getBoundingClientRect();
@@ -39,6 +41,8 @@ function animate() {
   // if (gameState === true) {
     ctx.clearRect(0, 0, board.width, board.height);
     newGame.drawCell(ctx);
+  newGame.drawHelp(ctx);
+  newGame.drawHelpt(ctx);
     newGame.drawTitle();
     // newGame.drawRound();
     newGame.drawTeam();
@@ -52,16 +56,18 @@ function animate() {
     newGame.checkPlayer();
     newGame.ballHit();
     newGame.frame++;
-    if (newGame.lives > 0) {
+    if (newGame.lives != 0) {
       requestAnimationFrame(animate);
     } else {
       // gameState = false
       // cancelAnimationFrame(animate);
       // console.log('done')
+      newGame.zombies = [];
       newGame.restartGame();
+      // alert("Ran out of lives. You lost! Refresh page (F5) to play again. Or click through alert.");
+      // newGame.lives = 0
       requestAnimationFrame(animate);
       // gameState = true;
-      // alert("Ran out of lives. You lost! Refresh page (F5) to play again.");
     }
 
     if ((newGame.numZombie === 0) && (newGame.zombies.length <= 0) && (newGame.lives > 0)) {
@@ -78,7 +84,7 @@ const btn2 = document.getElementById('btn2');
 let song = new Audio();
 song.src = '/music/song.mp3'
 btn1.addEventListener('click', function(){
-  song.volume = 0.3
+  song.volume = 0.05
   song.play();
   song.addEventListener('ended', function(){
     song.play();

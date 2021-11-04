@@ -22,7 +22,7 @@ export default class Zombie {
   }
   increaseSpeed() {
     this.speed1 += 0.2
-    console.log('speed: ' + this.speed1)
+    // console.log('speed: ' + this.speed1)
   }
 
   drawZombie() {
