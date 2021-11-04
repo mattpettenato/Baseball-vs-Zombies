@@ -6,7 +6,7 @@ import Game from './scripts/game.js';
 
 
 
-document.addEventListener('load', function() {
+document.addEventListener('DOMContentLoaded', function() {
   const board = document.getElementById('board');
   const ctx = board.getContext('2d');
 
