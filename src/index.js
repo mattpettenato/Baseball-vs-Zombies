@@ -46,8 +46,8 @@ function animate() {
   // if (gameState === true) {
     ctx.clearRect(0, 0, board.width, board.height);
     newGame.drawCell(ctx);
-  newGame.drawHelp(ctx);
-  newGame.drawHelpt(ctx);
+  // newGame.drawHelp(ctx);
+  // newGame.drawHelpt(ctx);
     newGame.drawTitle();
     // newGame.drawRound();
     newGame.drawTeam();
@@ -55,7 +55,7 @@ function animate() {
     newGame.stillZom();
     // newGame.drawLives();
     newGame.drawBall();
-    // newGame.drawScore();
+
     newGame.playerHit();
     newGame.checkZom();
     newGame.checkPlayer();

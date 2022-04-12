@@ -69,20 +69,38 @@ body {
   flex-direction: row;
   align-content: center;
   justify-content: center;
-  /* max-width: 1000px; */
+  align-items: center;
+
+}
+#tester{
+    width: 1000px;
+  max-width: 1000px;
+  min-width: 1000px;
+    display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 99px;
 }
 
 #instructions{
   border: none;
   overflow: auto;
   outline: none;
+  margin-top: 10px;
+
+}
+
+#linkers img{
+  max-width: 64px;
+  max-height: 64px;
 }
 
 #instruct{
   border: none;
   overflow: auto;
   outline: none;
-
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -95,6 +113,7 @@ body {
 #buttons{
   display:flex;
   flex-direction: column;
+  margin: 2px;
 }
 
 
