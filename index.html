@@ -16,30 +16,35 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
+  <style>
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+    }
+  </style>
 </head>
 
-<body>
-  <!-- <canvas id="canvas1" ></canvas>
-  <canvas id="canvas2" ></canvas>
-  <canvas id="canvas3"></canvas> -->
-  <!-- <img width="100" height="100" src="/img/testplayer.jpg"> -->
-<!-- <header id= "header">Baseball vs Zombies</header> -->
-<div id="relative">
-  <div id="absolute">
-  <button style="z-index:2" id="btn1">Start Music</button>
-  <button style="z-index:2" id="btn2">Stop Music</button>
-  <button style="z-index:2" id="btn3">Restart Game</button>
-  <a id="git" style="z-index:2" href="https://github.com/mattpettenato/JavaScript_Project">
-    <img src="./img/GitHub-Mark-64px.png">
-  </a>
-  </div>
-</div>
-
-
-  <div class="Games">
-    <canvas style="z-index:1" id="board"></canvas>
-  </div>
-
-
-</body>
+  <body>
+    <div id="fullpage">
+      <div id="Games">
+        <!-- <h1>test</h1> -->
+        <canvas style="z-index:1" id="board"></canvas>
+      </div>
+      <div id="buttons">
+        <button style="z-index:2" id="btn1">Start Music</button>
+        <button style="z-index:2" id="btn2">Stop Music</button>
+        <button style="z-index:2" id="btn3">Restart Game</button>
+      </div>
+      
+    </div>
+    <div id="git-link">
+      <a id="git" style="z-index:2" href="https://github.com/mattpettenato/JavaScript_Project">
+        <img src="./img/GitHub-Mark-64px.png">
+      </a>
+      <div id="instructions">
+        <textarea readonly name="instruct" id="instruc" cols="30" rows="5" style="resize: none;">Click on the board to place baseball players. You can place one extra player per round. Do not let the zombies get past to the road.</textarea>
+      </div>
+    </div>
+  </body>
 </html>

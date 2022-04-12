@@ -16,7 +16,7 @@ body {
 }
 
 #relative{
-  position: relative;
+  /* position: relative; */
 }
 
 #btn2 {
@@ -24,7 +24,7 @@ body {
   /* position: absolute;
   top: 150px;
   left: 367px; */
-  position: fixed;
+  /* position: fixed; */
   /* top: 50%; */
   /* transform: translate(-50%,-50%); */
 }
@@ -45,27 +45,56 @@ body {
   position: absolute;
   top: 200px;
   left: 367px; */
-  position: absolute;
+  /* position: absolute; */
   /* top: 80%; */
   margin: 0 auto;
-  top: 2000%;
+  /* top: 2000%; */
 
   /* left: 40%; */
   /* transform: translate(-50%,-50%); */
 }
 
 #git {
-  position: absolute;
+  /* position: absolute;
   margin: 0, auto;
   left: 10%;
   top: 3000%;
   transform: translate(-50%, -50%);
+  display: flex; */
+  margin: 10px;
+}
 
+#git-link{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  /* max-width: 1000px; */
+}
 
-  
-  /* bottom: 8px;
-  left: 16px; */
+#instructions{
+  border: none;
+  overflow: auto;
+  outline: none;
+}
 
+#instruct{
+  border: none;
+  overflow: auto;
+  outline: none;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-color: Transparent;
+  resize: none;
+  box-shadow: none!important;
+  outline: -webkit-focus-ring-color auto 0px !important;
+}
+
+#buttons{
+  display:flex;
+  flex-direction: column;
 }
 
 
@@ -98,7 +127,7 @@ body {
 #board {
   /* background-color:honeydew ; */
   background-image: url("../testmap.png");
-  position: absolute;
+  /* position: absolute; */
   top: 50px;
   bottom: 50px;
   left: 0;
@@ -107,6 +136,7 @@ body {
   width: 1000px;
   height: 700px;
   text-align:center;
+  margin-top: 8%;
 }
 
 
@@ -117,3 +147,14 @@ body {
 #main {
   color: blue;
 }
+
+#fullpage{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6%;
+}
+
+
