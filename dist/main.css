@@ -15,43 +15,24 @@ body {
   justify-content: center;
 }
 
-#relative{
-  /* position: relative; */
-}
-
 #btn2 {
   cursor: pointer;
-  /* position: absolute;
-  top: 150px;
-  left: 367px; */
-  /* position: fixed; */
-  /* top: 50%; */
-  /* transform: translate(-50%,-50%); */
 }
 
 #btn1 {
   cursor: pointer;
-  /* /* position: absolute; */
   top: 120px;
-  left: 367px;   
-  /* position: static; */
-  /* top: 50%; */
-  /* left: 60%; */
-  /* transform: translate(-50%,-50%); */
+  left: 367px;
 }
 
 #btn3 {
-  /* cursor: pointer;
-  position: absolute;
-  top: 200px;
-  left: 367px; */
-  /* position: absolute; */
-  /* top: 80%; */
+  cursor: pointer;
   margin: 0 auto;
-  /* top: 2000%; */
+}
 
-  /* left: 40%; */
-  /* transform: translate(-50%,-50%); */
+#btn4 {
+  cursor: pointer;
+  margin: 0;
 }
 
 #git {
@@ -114,6 +95,10 @@ body {
   display:flex;
   flex-direction: column;
   margin: 2px;
+}
+
+#buttons button{
+  width-min: 100px;
 }
 
 

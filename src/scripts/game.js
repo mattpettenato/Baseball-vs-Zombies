@@ -90,6 +90,10 @@ export default class Game {
 
   }
 
+  pauseGame(){
+    
+  }
+
   stillZom() {
     for (let i = 0; i < this.zombies.length; i++) {
       if ((this.zombies[i]['x'] <= 100) && this.zombies[i]) {

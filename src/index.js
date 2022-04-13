@@ -1,11 +1,6 @@
 import BaseballPlayer from './scripts/baseball_player';
 import Game from './scripts/game';
 
-
-
-
-
-
 document.addEventListener('DOMContentLoaded', function() {
   const board = document.getElementById('board');
   const ctx = board.getContext('2d');
@@ -14,7 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const ctx1 = board.getContext('2d');
 
   const newGame = new Game();
-  let gameState = true;
+  // let gameState = true;
+  let gamePause = false;
 
 board.addEventListener('click', function(event) {
   const xPos = newGame.board.mouse['x'] - (newGame.board.mouse['x'] % newGame.board.unitSize);
@@ -41,9 +37,10 @@ board.addEventListener('mousemove', function (event) {
   newGame.board.mouse.y = event.y - boardPos.top
 })
 
-
+// let pauseGame()
 function animate() {
-  // if (gameState === true) {
+  console.log(gamePause)
+  if (gamePause != true) {
     ctx.clearRect(0, 0, board.width, board.height);
     newGame.drawCell(ctx);
   // newGame.drawHelp(ctx);
@@ -55,7 +52,7 @@ function animate() {
     newGame.stillZom();
     // newGame.drawLives();
     newGame.drawBall();
-
+    // newGame.drawScore();
     newGame.playerHit();
     newGame.checkZom();
     newGame.checkPlayer();
@@ -64,30 +61,37 @@ function animate() {
     // console.log('test')
     if (newGame.lives != 0) {
       // requestAnimationFrame(animate);
-    } else {
+    } else if (newGame.lives === 0){
+      console.log('over over over over over')
       // gameState = false
       // cancelAnimationFrame(animate);
       // console.log('done')
       newGame.zombies = [];
-      newGame.restartGame();
+      // newGame.restartGame();
       // alert("Ran out of lives. You lost! Refresh page (F5) to play again. Or click through alert.");
       // newGame.lives = 0
-      // requestAnimationFrame(animate);
+      requestAnimationFrame(animate);
       // gameState = true;
     }
+  }
 
     if ((newGame.numZombie === 0) && (newGame.zombies.length <= 0) && (newGame.lives > 0)) {
       newGame.roundOver();
     }
-  requestAnimationFrame(animate);
+  // requestAnimationFrame(animate);
 
   }
-
-// }
-animate()
+if (gamePause === false){
+  animate()
+} else {
+  cancelAnimationFrame(animate);
+}
 
 const btn1 = document.getElementById('btn1');
 const btn2 = document.getElementById('btn2');
+const btn3 = document.getElementById('btn3');
+const btn4 = document.getElementById('btn4');
+
 
 let song = new Audio();
 song.src = './music/song.mp3'
@@ -101,12 +105,19 @@ btn1.addEventListener('click', function(){
   btn2.addEventListener('click', function(){
     song.pause();
   })
-  
 })
 
 btn3.addEventListener('click', function (){
   console.log('hello')
   newGame.restartGame();
+});
+
+btn4.addEventListener('click', function (){
+  console.log('hello')
+  gamePause = true
+  console.log(gamePause)
+
+  cancelAnimationFrame(animate);
 });
 
 })
