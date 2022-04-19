@@ -11,7 +11,7 @@ body {
   font-style: italic;
   font-weight: bold;
   color: rgb(42, 82, 142);
-    display: flex;
+  display: flex;
   justify-content: center;
 }
 
@@ -19,7 +19,7 @@ body {
   position: relative;
 }
 
-#btn2 {
+/* #btn2 {
 
 }
 
@@ -33,7 +33,7 @@ body {
 
 #btn4 {
 
-}
+} */
 
 #git {
   position: absolute;
@@ -41,19 +41,13 @@ body {
   left: 10%;
   top: 3000%;
   transform: translate(-50%, -50%);
-
-
-  
-  /* bottom: 8px;
-  left: 16px; */
-
 }
 #buttons{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-right: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-right: 5px;
 }
 
 #buttons button{
@@ -87,24 +81,12 @@ body {
 }
 
 #board {
-  /* background-color:honeydew ; */
   background-image: url("../testmap.png");
-  /* position: absolute;
-  top: 50px;
-  bottom: 50px;
-  left: 0;
-  right: 0; */
-  /* margin: 0 auto; */
   width: 1000px;
   height: 700px;
   text-align:center;
 }
 
-
-
-/*!*************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
-  \*************************************************************************************************************************************/
 #main {
   color: blue;
 }
@@ -127,16 +109,15 @@ body {
 }
 
 #Games{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-    padding-right: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 100px;
 }
 
 #gitts{
   margin-right: 15px;
-
 }
 
 #the-rest{
@@ -150,4 +131,10 @@ body {
 
 #fullpage{
   margin-top: 5%
+}
+/*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
+  \*************************************************************************************************************************************/
+#main {
+  color: blue;
 }

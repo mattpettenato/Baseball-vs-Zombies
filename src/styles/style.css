@@ -8,7 +8,7 @@ body {
   font-style: italic;
   font-weight: bold;
   color: rgb(42, 82, 142);
-    display: flex;
+  display: flex;
   justify-content: center;
 }
 
@@ -16,40 +16,21 @@ body {
   position: relative;
 }
 
-#btn2 {
-  cursor: pointer;
-  /* position: absolute;
-  top: 150px;
-  left: 367px; */
-  position: fixed;
-  /* top: 50%; */
-  /* transform: translate(-50%,-50%); */
+/* #btn2 {
+
 }
 
 #btn1 {
-  cursor: pointer;
-  /* /* position: absolute; */
-  top: 120px;
-  left: 367px;   
-  /* position: static; */
-  /* top: 50%; */
-  /* left: 60%; */
-  /* transform: translate(-50%,-50%); */
+
 }
 
 #btn3 {
-  /* cursor: pointer;
-  position: absolute;
-  top: 200px;
-  left: 367px; */
-  position: absolute;
-  /* top: 80%; */
-  margin: 0 auto;
-  top: 2000%;
 
-  /* left: 40%; */
-  /* transform: translate(-50%,-50%); */
 }
+
+#btn4 {
+
+} */
 
 #git {
   position: absolute;
@@ -57,14 +38,18 @@ body {
   left: 10%;
   top: 3000%;
   transform: translate(-50%, -50%);
-
-
-  
-  /* bottom: 8px;
-  left: 16px; */
-
+}
+#buttons{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-right: 5px;
 }
 
+#buttons button{
+  width: 100px;
+}
 
 #canvas2 {
   background-color: indianred ;
@@ -93,17 +78,54 @@ body {
 }
 
 #board {
-  /* background-color:honeydew ; */
   background-image: url("../testmap.png");
-  position: absolute;
-  top: 50px;
-  bottom: 50px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
   width: 1000px;
   height: 700px;
   text-align:center;
 }
 
+#main {
+  color: blue;
+}
 
+#linkers img{
+  width: 74px;
+  height: 64px;
+  margin-right: -10px;
+}
+
+#git-link{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#links{
+  display:flex;
+  flex-direction: row;
+}
+
+#Games{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 100px;
+}
+
+#gitts{
+  margin-right: 15px;
+}
+
+#the-rest{
+  display:flex;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 24%;
+  margin-right: 24%;
+  margin-top: 0.5%;
+}
+
+#fullpage{
+  margin-top: 5%
+}

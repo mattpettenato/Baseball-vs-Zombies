@@ -1,5 +1,5 @@
 const BASEBALLPLAYER = new Image()
-BASEBALLPLAYER.src = './testplayer3.jpg'
+BASEBALLPLAYER.src = '../../img/plswork_no_background.png'
 
 const board = document.getElementById('board');
 const ctx = board.getContext('2d');
@@ -14,7 +14,10 @@ export default class BaseballPlayer {
     this.team = [];
     this.picX = 0;
     this.picY = 0;
-
+    this.minFrame = 0;
+    this.maxFrame = 4;
+    this.spriteWidth = 52;
+    this.spriteHeight= 52;
   }
   drawPlayer() {
     // ctx.fillStyle = 'rgb(89	136	93	)';
@@ -25,5 +28,9 @@ export default class BaseballPlayer {
     ctx.drawImage(BASEBALLPLAYER, this.x, this.y, 100, 100)
     ctx.fillText(this.health + " hp", this.x, this.y + 10);
   }  
+
+  updatePlayer() {
+    
+  }
 }
 
