@@ -15,22 +15,34 @@ export default class BaseballPlayer {
     this.picX = 0;
     this.picY = 0;
     this.minFrame = 0;
-    this.maxFrame = 4;
+    this.maxFrame = 2;
     this.spriteWidth = 52;
-    this.spriteHeight= 52;
+    this.spriteHeight = 52;
+    this.throwing = false;
   }
+
+  update() {
+    // this.x -= this
+    console.log(this.frame)
+    if (this.frame % 8 === 0){
+      if (this.picX < this.maxFrame) this.picX++;
+      else this.picX = this.minFrame;
+    }
+    // if 
+  }
+
   drawPlayer() {
+    console.log(this.picX)
     // ctx.fillStyle = 'rgb(89	136	93	)';
     // ctx.fillRect(this.x, this.y, this.width, this.height);
     ctx.fillStyle = ('red');
     ctx.font = "12px Courier";
+    // drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
+    ctx.drawImage(BASEBALLPLAYER, this.picX * this.spriteWidth, 0, this.spriteWidth, this.spriteHeight, this.x, this.y, this.width, this.height)
 
-    ctx.drawImage(BASEBALLPLAYER, this.x, this.y, 100, 100)
+    // ctx.drawImage(BASEBALLPLAYER, this.x, this.y, 100, 100)
     ctx.fillText(this.health + " hp", this.x, this.y + 10);
   }  
 
-  updatePlayer() {
-    
-  }
 }
 

@@ -197,6 +197,7 @@ export default class Game {
   drawTeam() {
     for (let i = 0; i < this.player.team.length; i++) {
       this.player.team[i].drawPlayer();
+      this.player.team[i].update();
       if (this.frame % 100 === 0) {
         this.numBalls = this.numBalls + 1;
         this.projectiles.push(new Projectile(this.player.team[i].x, this.player.team[i].y))
