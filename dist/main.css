@@ -15,92 +15,50 @@ body {
   justify-content: center;
 }
 
+#relative{
+  position: relative;
+}
+
 #btn2 {
-  cursor: pointer;
+
 }
 
 #btn1 {
-  cursor: pointer;
-  top: 120px;
-  left: 367px;
+
 }
 
 #btn3 {
-  cursor: pointer;
-  margin: 0 auto;
+
 }
 
 #btn4 {
-  cursor: pointer;
-  margin: 0;
+
 }
 
 #git {
-  /* position: absolute;
+  position: absolute;
   margin: 0, auto;
   left: 10%;
   top: 3000%;
   transform: translate(-50%, -50%);
-  display: flex; */
-  margin: 10px;
-}
 
-#git-link{
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
+
+  
+  /* bottom: 8px;
+  left: 16px; */
 
 }
-#tester{
-    width: 1000px;
-  max-width: 1000px;
-  min-width: 1000px;
-    display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: space-between;
-  align-items: center;
-  margin-right: 99px;
-}
-
-#instructions{
-  border: none;
-  overflow: auto;
-  outline: none;
-  margin-top: 10px;
-
-}
-
-#linkers img{
-  max-width: 64px;
-  max-height: 64px;
-}
-
-#instruct{
-  border: none;
-  overflow: auto;
-  outline: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  border-color: Transparent;
-  resize: none;
-  box-shadow: none!important;
-  outline: -webkit-focus-ring-color auto 0px !important;
-}
-
 #buttons{
-  display:flex;
-  flex-direction: column;
-  margin: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 5px;
 }
 
 #buttons button{
-  width-min: 100px;
+  width: 100px;
 }
-
 
 #canvas2 {
   background-color: indianred ;
@@ -131,16 +89,15 @@ body {
 #board {
   /* background-color:honeydew ; */
   background-image: url("../testmap.png");
-  /* position: absolute; */
+  /* position: absolute;
   top: 50px;
   bottom: 50px;
   left: 0;
-  right: 0;
-  margin: 0 auto;
+  right: 0; */
+  /* margin: 0 auto; */
   width: 1000px;
   height: 700px;
   text-align:center;
-  margin-top: 8%;
 }
 
 
@@ -152,13 +109,45 @@ body {
   color: blue;
 }
 
-#fullpage{
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  margin-top: 6%;
+#linkers img{
+  width: 74px;
+  height: 64px;
+  margin-right: -10px;
 }
 
+#git-link{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
 
+#links{
+  display:flex;
+  flex-direction: row;
+}
+
+#Games{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 100px;
+}
+
+#gitts{
+  margin-right: 15px;
+
+}
+
+#the-rest{
+  display:flex;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 24%;
+  margin-right: 24%;
+  margin-top: 0.5%;
+}
+
+#fullpage{
+  margin-top: 5%
+}

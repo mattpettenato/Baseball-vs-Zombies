@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const newGame = new Game();
   // let gameState = true;
-  let gamePause = false;
+  // let gamePause = false;
 
 board.addEventListener('click', function(event) {
   const xPos = newGame.board.mouse['x'] - (newGame.board.mouse['x'] % newGame.board.unitSize);
@@ -27,8 +27,6 @@ board.addEventListener('click', function(event) {
     console.log('Out of Tower Tokens')
     return;
   }
-  // add click git hub button and add the button img to canvas. then when click is in that region, the link is clicked.
-  // do the same with start music and stop music and restart
 })
 
 const boardPos = board.getBoundingClientRect();
@@ -39,39 +37,28 @@ board.addEventListener('mousemove', function (event) {
 
 // let pauseGame()
 function animate() {
-  console.log(gamePause)
-  if (gamePause != true) {
+  // console.log(gamePause)
+  console.log(newGame.lives)
+  if (newGame.gameStatus === true) {
     ctx.clearRect(0, 0, board.width, board.height);
     newGame.drawCell(ctx);
-  // newGame.drawHelp(ctx);
-  // newGame.drawHelpt(ctx);
     newGame.drawTitle();
-    // newGame.drawRound();
     newGame.drawTeam();
     newGame.drawEnemy();
     newGame.stillZom();
-    // newGame.drawLives();
     newGame.drawBall();
-    // newGame.drawScore();
     newGame.playerHit();
     newGame.checkZom();
     newGame.checkPlayer();
     newGame.ballHit();
     newGame.frame++;
-    // console.log('test')
-    if (newGame.lives != 0) {
-      // requestAnimationFrame(animate);
+    if (newGame.lives != 0 && newGame.gameStatus === true) {
+      requestAnimationFrame(animate);
+
     } else if (newGame.lives === 0){
       console.log('over over over over over')
-      // gameState = false
-      // cancelAnimationFrame(animate);
-      // console.log('done')
       newGame.zombies = [];
-      // newGame.restartGame();
-      // alert("Ran out of lives. You lost! Refresh page (F5) to play again. Or click through alert.");
-      // newGame.lives = 0
       requestAnimationFrame(animate);
-      // gameState = true;
     }
   }
 
@@ -81,17 +68,23 @@ function animate() {
   // requestAnimationFrame(animate);
 
   }
-if (gamePause === false){
+  console.log(newGame.gameStatus)
+
+if (newGame.gameStatus === false){
   animate()
 } else {
-  cancelAnimationFrame(animate);
+  // cancelAnimationFrame(animate);
+  console.log('zipzap')
+
+  // animate()
+
 }
 
 const btn1 = document.getElementById('btn1');
 const btn2 = document.getElementById('btn2');
 const btn3 = document.getElementById('btn3');
 const btn4 = document.getElementById('btn4');
-
+const btn5 = document.getElementById('btn5');
 
 let song = new Audio();
 song.src = './music/song.mp3'
@@ -114,10 +107,18 @@ btn3.addEventListener('click', function (){
 
 btn4.addEventListener('click', function (){
   console.log('hello')
-  gamePause = true
-  console.log(gamePause)
+  // newGame.gameStatus = true
+  console.log(newGame.gameStatus)
+  newGame.pauseGame()
+  // cancelAnimationFrame(animate);
+});
 
-  cancelAnimationFrame(animate);
+btn5.addEventListener('click', function (){
+  console.log('starting')
+  newGame.startGame();
+  console.log(newGame.gameStatus)
+  // gamePause = true;
+  animate()
 });
 
 })

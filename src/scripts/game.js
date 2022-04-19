@@ -9,6 +9,7 @@ const ctx = board.getContext('2d');
 
 export default class Game {
   constructor() {
+    this.gameStatus = false
     this.player = new BaseballPlayer();
     this.zombie = new Zombie();
     this.board = new Board();
@@ -90,8 +91,12 @@ export default class Game {
 
   }
 
+  startGame(){
+    this.gameStatus = true
+  }
+
   pauseGame(){
-    
+    this.gameStatus = false
   }
 
   stillZom() {

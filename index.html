@@ -28,32 +28,32 @@
   <body>
     <div id="fullpage">
       <div id="Games">
-        <!-- <h1>test</h1> -->
+                  <div id="buttons">
+                    <button style="z-index:2" id="btn1">Start Music</button>
+                    <button style="z-index:2" id="btn2">Stop Music</button>
+                    <button style="z-index:2" id="btn5">Start Game</button>
+                    <button style="z-index:2" id="btn4">Pause Game</button>
+                    <button style="z-index:2" id="btn3">Restart Game</button>
+                  </div>
         <canvas style="z-index:1" id="board"></canvas>
       </div>
-      <div id="buttons">
-        <button style="z-index:2" id="btn1">Start Music</button>
-        <button style="z-index:2" id="btn2">Stop Music</button>
-        <button style="z-index:2" id="btn4">Pause Game</button>
-        <button style="z-index:2" id="btn3">Restart Game</button>
+      <div id="the-rest">
+          <div id="instructions">
+            <textarea readonly name="instruct" id="instruc" cols="28" rows="5"
+              style="resize: none;">Click on the board to place baseball players. You can place one extra player per round. Do not let the zombies get past to the road.</textarea>
+          </div>
+          <div id="links">
+            <a id="gitts" style="z-index:2" href="https://github.com/mattpettenato/JavaScript_Project">
+              <img src="./img/GitHub-Mark-64px.png">
+            </a>
+            <a id="linkers" style="z-index:2" href="https://www.linkedin.com/in/matthew-pettenato-936236123/">
+              <!-- <img src="./img/LI-In-Bug.png"> -->
+              <img src="./img/LI-In-Bug.png">
+            </a>
+          </div>
       </div>
-      
-    </div>
-    <div id="git-link">
-      <div id="tester">
-        <div id="links">
-          <a id="git" style="z-index:2" href="https://github.com/mattpettenato/JavaScript_Project">
-            <img src="./img/GitHub-Mark-64px.png">
-          </a>
-          <a id="linkers" style="z-index:2" href="https://www.linkedin.com/in/matthew-pettenato-936236123/">
-            <img src="./img/LI-In-Bug.png">
-          </a>
-
-        </div>
-        <div id="instructions">
-          <textarea readonly name="instruct" id="instruc" cols="28" rows="5" style="resize: none;">Click on the board to place baseball players. You can place one extra player per round. Do not let the zombies get past to the road.</textarea>
-        </div>
-      </div>
-    </div>
-  </body>
+      <footer>
+      </footer>
+    </body>
+  </div>
 </html>
