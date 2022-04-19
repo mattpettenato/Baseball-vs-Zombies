@@ -75,7 +75,7 @@ export default class Game {
   }
 
   restartGame(){
-    // ctx.clearRect(0, 0, board.width, board.height);
+    ctx.clearRect(0, 0, board.width, board.height);
     this.round = 1;
     this.score = 0;
     this.numZombie = 2;
@@ -129,6 +129,15 @@ export default class Game {
     ctx.font = "30px Courier";
     ctx.textAlign = "start";
     ctx.fillText('Baseball vs. Zombies', 320, 60);
+  }
+
+  drawEnd(){
+    ctx.fillStyle = ('red');
+    ctx.font = "30px Courier";
+    ctx.textAlign = "start";
+    ctx.fillText("Your Score: " + this.score, 380, 200)
+    ctx.fillText('PRESS RESTART TO PlAY AGAIN', 260, 300);
+;
   }
 
   drawPAUSE() {
@@ -197,10 +206,12 @@ export default class Game {
   drawTeam() {
     for (let i = 0; i < this.player.team.length; i++) {
       this.player.team[i].drawPlayer();
-      this.player.team[i].update();
       if (this.frame % 100 === 0) {
         this.numBalls = this.numBalls + 1;
         this.projectiles.push(new Projectile(this.player.team[i].x, this.player.team[i].y))
+      }
+      if (this.frame % 50 === 0) {
+        this.player.team[i].update();
       }
     }
   }
@@ -212,6 +223,7 @@ export default class Game {
       for (let i = 0; i < this.projectiles.length; i++) {
         this.projectiles[i].drawBaseball();
         this.projectiles[i].moveBall();
+        this.player.update()
       }
     }
   }

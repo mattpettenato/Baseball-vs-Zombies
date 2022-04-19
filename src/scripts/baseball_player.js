@@ -15,7 +15,7 @@ export default class BaseballPlayer {
     this.picX = 0;
     this.picY = 0;
     this.minFrame = 0;
-    this.maxFrame = 2;
+    this.maxFrame = 1;
     this.spriteWidth = 52;
     this.spriteHeight = 52;
     this.throwing = false;
@@ -23,16 +23,16 @@ export default class BaseballPlayer {
 
   update() {
     // this.x -= this
-    console.log(this.frame)
-    if (this.frame % 8 === 0){
-      if (this.picX < this.maxFrame) this.picX++;
-      else this.picX = this.minFrame;
-    }
+    // console.log(this.frame)
+    // if (this.frame % 8 === 0){
+    // }
+    if (this.picX < this.maxFrame) this.picX++;
+    else this.picX = this.minFrame;
     // if 
   }
 
   drawPlayer() {
-    console.log(this.picX)
+    // console.log(this.picX)
     // ctx.fillStyle = 'rgb(89	136	93	)';
     // ctx.fillRect(this.x, this.y, this.width, this.height);
     ctx.fillStyle = ('red');

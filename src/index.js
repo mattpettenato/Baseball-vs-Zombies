@@ -24,7 +24,7 @@ board.addEventListener('click', function(event) {
     newGame.player.team.push(new BaseballPlayer(xPos, yPos));
     newGame.towerToken = newGame.towerToken - 1;
   } else {
-    console.log('Out of Tower Tokens')
+    // console.log('Out of Tower Tokens')
     return;
   }
 })
@@ -62,9 +62,17 @@ function animate() {
       requestAnimationFrame(animate);
 
     } else if (newGame.lives === 0){
-      console.log('over over over over over')
+      // console.log('over over over over over')
       newGame.zombies = [];
-      requestAnimationFrame(animate);
+      newGame.player.team = [];
+      newGame.projectiles = [];
+
+      // ctx.clearRect(0, 0, board.width, board.height);
+      newGame.drawTitle();
+
+      newGame.drawEnd();
+      // requestAnimationFrame(animate);
+
     }
   }
 
@@ -74,13 +82,13 @@ function animate() {
   // requestAnimationFrame(animate);
 
   }
-  console.log(newGame.gameStatus)
+  // console.log(newGame.gameStatus)
 
 if (newGame.gameStatus === false){
   animate()
 } else {
   // cancelAnimationFrame(animate);
-  console.log('zipzap')
+  // console.log('zipzap')
 
   // animate()
 
@@ -99,7 +107,7 @@ btn1.addEventListener('click', function(){
   song.play();
   song.addEventListener('ended', function(){
     song.play();
-    console.log('song ended. restarting')
+    // console.log('song ended. restarting')
   })
   btn2.addEventListener('click', function(){
     song.pause();
@@ -107,24 +115,24 @@ btn1.addEventListener('click', function(){
 })
 
 btn3.addEventListener('click', function (){
-  console.log('hello')
+  // console.log('hello')
   newGame.restartGame();
   animate()
 
 });
 
 btn4.addEventListener('click', function (){
-  console.log('hello')
+  // console.log('hello')
   // newGame.gameStatus = true
-  console.log(newGame.gameStatus)
+  // console.log(newGame.gameStatus)
   newGame.pauseGame()
   // cancelAnimationFrame(animate);
 });
 
 btn5.addEventListener('click', function (){
-  console.log('starting')
+  // console.log('starting')
   newGame.startGame();
-  console.log(newGame.gameStatus)
+  // console.log(newGame.gameStatus)
   // gamePause = true;
   animate()
 });
