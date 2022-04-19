@@ -170,8 +170,6 @@ export default class Game {
     ctx.fillRect(10, 10, 275, 60)
   }
 
-
-
   drawHelpt(ctx){
     ctx.fillStyle = ('black');
     ctx.font = "13px Courier";
@@ -251,7 +249,7 @@ export default class Game {
       for (let i = 0; i < this.zombies.length; i++) {
         for (let j = 0; j < this.projectiles.length; j++) {
           if (this.zombies[i] && this.projectiles[j]) {
-            if ((this.projectiles[j].x >= this.zombies[i].x - 5) && (this.projectiles[j].y === this.zombies[i].y)) {
+            if ((this.projectiles[j].x >= this.zombies[i].x - 55) && (this.projectiles[j].y === this.zombies[i].y)) {
               // console.log("test")
               this.zombies[i].health -= 10
               this.projectiles.splice(j, 1)
@@ -304,7 +302,7 @@ export default class Game {
           if (this.player.team[j] && this.zombies[i] && (this.player.team[j].x + 100 < this.zombies[i].x) && (this.player.team[j].y === this.zombies[i].y)) {
             for (let k = 1; k < this.player.team.length; k++)
               if (((this.zombies[i].movement === 0) && (this.player.team[j].y === this.player.team[k].y)) && (((this.player.team[j].x - this.player.team[k].x) === 100) && ((this.player.team[j].x - this.player.team[k].x) === -100))) {
-                console.log('test')
+                // console.log('test')
               this.zombies[i].movement = 0.9
           }
         }

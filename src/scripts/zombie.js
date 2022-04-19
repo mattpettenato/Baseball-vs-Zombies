@@ -47,7 +47,7 @@ export default class Zombie {
     // ctx.drawImage(ZOM, this.x - 35, this.y, 100, 100)
     // drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
 
-    ctx.drawImage(ZOM, this.picX * this.spriteWidth, 0, this.spriteWidth, this.spriteHeight, this.x - 30, this.y, this.width, this.height)
+    ctx.drawImage(ZOM, this.picX * this.spriteWidth, 0, this.spriteWidth, this.spriteHeight, this.x - 15, this.y, this.width, this.height)
 
   }
 }
