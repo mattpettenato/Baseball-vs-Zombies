@@ -19,6 +19,7 @@ export default class Zombie {
   }
   moveZombie(){
     this.x -= this.movement
+    console.log(this.movement)
   }
   increaseSpeed() {
     this.speed1 += 0.2

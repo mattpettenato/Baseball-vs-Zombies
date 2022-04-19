@@ -68,10 +68,10 @@ export default class Game {
   }
 
   roundOver() {
-      this.round = this.round + 1;
-      this.numZombie = this.round * 4;
-      this.towerToken = this.towerToken + 1;
-      this.zombie.increaseSpeed();
+    this.round = this.round + 1;
+    this.numZombie = this.round * 4;
+    this.towerToken = this.towerToken + 1;
+    this.zombie.increaseSpeed();
   }
 
   restartGame(){
@@ -88,7 +88,8 @@ export default class Game {
     this.player.team = [];
     this.ball.projectiles = [];
     this.zombie.speed1 = 0.8;
-    this.gameStatus = true
+    // this.gameStatus = true
+    this.gameStatus = false
   }
 
   startGame(){
