@@ -179,9 +179,6 @@ export default class Game {
     ctx.fillText("player. You can place one extra", 15, 38)
     ctx.fillText("player per round. Do not let the", 15, 51)
     ctx.fillText("zombies get to the path.", 15, 64)
-
-
-
   }
 
   drawEnemy() {
@@ -191,6 +188,9 @@ export default class Game {
     for (let i = 0; i < this.zombies.length; i++) {
       this.zombies[i].moveZombie();
       this.zombies[i].drawZombie();
+      if (this.frame % 10 == 0) {
+        this.zombies[i].update();
+      }
     }
     if (this.frame % 200 === 0) {
       let y = Math.floor(Math.random() * 5 + 1) * 100;
@@ -201,6 +201,7 @@ export default class Game {
         this.numZombie = this.numZombie - 1;
       }
     }
+
   }
 
   drawTeam() {
