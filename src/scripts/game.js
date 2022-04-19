@@ -88,7 +88,7 @@ export default class Game {
     this.player.team = [];
     this.ball.projectiles = [];
     this.zombie.speed1 = 0.8;
-
+    this.gameStatus = true
   }
 
   startGame(){
@@ -130,6 +130,13 @@ export default class Game {
     ctx.fillText('Baseball vs. Zombies', 320, 60);
   }
 
+  drawPAUSE() {
+    ctx.fillStyle = ('red');
+    ctx.font = "30px Courier";
+    ctx.textAlign = "start";
+    ctx.fillText('PRESS START TO BEGIN', 320, 300);
+  }
+
   drawCell(ctx) {
     ctx.fillStyle = ('red');
     ctx.font = "25px Courier";
@@ -152,6 +159,8 @@ export default class Game {
     // ctx.font = "25px Courier";
     ctx.fillRect(10, 10, 275, 60)
   }
+
+
 
   drawHelpt(ctx){
     ctx.fillStyle = ('black');

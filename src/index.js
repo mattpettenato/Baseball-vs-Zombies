@@ -38,11 +38,17 @@ board.addEventListener('mousemove', function (event) {
 // let pauseGame()
 function animate() {
   // console.log(gamePause)
-  console.log(newGame.lives)
+  // console.log(newGame.lives)
+  newGame.drawTitle();
+  newGame.drawCell(ctx);
+  if (newGame.gameStatus === false) {
+
+    newGame.drawPAUSE();
+  }
   if (newGame.gameStatus === true) {
     ctx.clearRect(0, 0, board.width, board.height);
-    newGame.drawCell(ctx);
     newGame.drawTitle();
+    newGame.drawCell(ctx);
     newGame.drawTeam();
     newGame.drawEnemy();
     newGame.stillZom();
@@ -103,6 +109,8 @@ btn1.addEventListener('click', function(){
 btn3.addEventListener('click', function (){
   console.log('hello')
   newGame.restartGame();
+  animate()
+
 });
 
 btn4.addEventListener('click', function (){
