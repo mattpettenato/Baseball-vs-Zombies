@@ -1,6 +1,6 @@
 const BASEBALLPLAYER = new Image()
 // BASEBALLPLAYER.src = '../../img/2x2ballplayer.png'
-BASEBALLPLAYER.src = '../../img/plswork_no_background.png'
+BASEBALLPLAYER.src = 'img/plswork_no_background.png'
 
 const board = document.getElementById('board');
 const ctx = board.getContext('2d');
