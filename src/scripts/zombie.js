@@ -1,6 +1,6 @@
 // import Projectile from './projectile.js'
 const ZOM = new Image()
-ZOM.src = '/img/zombiewalksheet.png'
+ZOM.src = 'img/zombiewalksheet.png'
 
 
 const board = document.getElementById('board');
