@@ -44,7 +44,6 @@ export default class Game {
   }
 
   drawScore(){
-    // console.log(test);
     ctx.fillStyle = 'red';
     ctx.font = "22px Courier";
     ctx.textAlign = "start";
@@ -182,9 +181,6 @@ export default class Game {
   }
 
   drawEnemy() {
-    // console.log(this.zombie.zombies)
-    // console.log(this.zombie.deadzombies)
-  
     for (let i = 0; i < this.zombies.length; i++) {
       this.zombies[i].moveZombie();
       this.zombies[i].drawZombie();
@@ -208,19 +204,14 @@ export default class Game {
     for (let i = 0; i < this.player.team.length; i++) {
       this.player.team[i].drawPlayer();
       if (this.frame % 50 === 0 && this.frame % 2 === 0) {
-        // this.player.team[i].update();
-
         this.numBalls = this.numBalls + 1;
         if (this.frame % 2 === 0) {
           this.player.team[i].throwing = true
         }
         if (this.player.team[i].throwing && this.frame % 100 === 0 && this.frame % 2 === 0){
-          // console.log('player frame ' + this.frame[0])
           this.player.team[i].update();
           if (this.frame % 200 === 0){
-            console.log(this.player.team[i].picX)
             this.projectiles.push(new Projectile(this.player.team[i].x, this.player.team[i].y))
-            console.log('ball frame ' + this.frame)
             this.player.team[i].throwing = false
           }
         }
@@ -234,11 +225,8 @@ export default class Game {
     if (this.projectiles.length > 0) {
       this.stillBall();
       for (let i = 0; i < this.projectiles.length; i++) {
-        // if (this.frame % 2 === 0){
           this.projectiles[i].drawBaseball();
           this.projectiles[i].moveBall();
-
-        // }
       }
     }
   }
@@ -266,7 +254,6 @@ export default class Game {
         for (let j = 0; j < this.projectiles.length; j++) {
           if (this.zombies[i] && this.projectiles[j]) {
             if ((this.projectiles[j].x >= this.zombies[i].x - 55) && (this.projectiles[j].y === this.zombies[i].y)) {
-              // console.log("test")
               this.zombies[i].health -= 10
               this.projectiles.splice(j, 1)
               if ((this.zombies[i]) && (this.zombies[i].health <= 0)) {
@@ -291,7 +278,6 @@ export default class Game {
             if ((this.player.team[j].health <= 0) ) {
               this.zombies[i].movement = 2
               this.player.team.splice(j, 1);
-              console.log('test')
               for (let i = 0; i < this.zombies.length; i++) {this.zombies[i].movement = 1.1}
             }
           }

@@ -107,7 +107,7 @@ btn1.addEventListener('click', function(){
   song.play();
   song.addEventListener('ended', function(){
     song.play();
-    // console.log('song ended. restarting')
+
   })
   btn2.addEventListener('click', function(){
     song.pause();
@@ -115,16 +115,12 @@ btn1.addEventListener('click', function(){
 })
 
 btn3.addEventListener('click', function (){
-  // console.log('hello')
   newGame.restartGame();
   animate()
 
 });
 
 btn4.addEventListener('click', function (){
-  // console.log('hello')
-  // newGame.gameStatus = true
-  // console.log(newGame.gameStatus)
   newGame.pauseGame()
   // cancelAnimationFrame(animate);
 });
@@ -135,8 +131,6 @@ btn5.addEventListener('click', function (){
     newGame.startGame();
     animate()
   }
-  // console.log(newGame.gameStatus)
-  // gamePause = true;
 });
 
 })
