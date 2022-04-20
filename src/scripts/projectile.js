@@ -25,6 +25,7 @@ export default class Projectile {
     // ctx.fillStyle = this.color
     // ctx.fill();
     ctx.drawImage(THEBALL, this.x + 40, this.y + 25, 20, 20)
+    // console.log('thrown ball' + this.x)
   }
 
 

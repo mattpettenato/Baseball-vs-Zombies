@@ -93,6 +93,8 @@ export default class Game {
   }
 
   startGame(){
+    ctx.clearRect(0, 0, board.width, board.height);
+
     this.gameStatus = true
   }
 
@@ -205,24 +207,38 @@ export default class Game {
   drawTeam() {
     for (let i = 0; i < this.player.team.length; i++) {
       this.player.team[i].drawPlayer();
-      if (this.frame % 100 === 0) {
+      if (this.frame % 50 === 0 && this.frame % 2 === 0) {
+        // this.player.team[i].update();
+
         this.numBalls = this.numBalls + 1;
-        this.projectiles.push(new Projectile(this.player.team[i].x, this.player.team[i].y))
-      }
-      if (this.frame % 50 === 0) {
-        this.player.team[i].update();
+        if (this.frame % 2 === 0) {
+          this.player.team[i].throwing = true
+        }
+        if (this.player.team[i].throwing && this.frame % 100 === 0 && this.frame % 2 === 0){
+          // console.log('player frame ' + this.frame[0])
+          this.player.team[i].update();
+          if (this.frame % 200 === 0){
+            console.log(this.player.team[i].picX)
+            this.projectiles.push(new Projectile(this.player.team[i].x, this.player.team[i].y))
+            console.log('ball frame ' + this.frame)
+            this.player.team[i].throwing = false
+          }
+        }
       }
     }
   }
 
+
+
   drawBall() {
     if (this.projectiles.length > 0) {
       this.stillBall();
-      // if (this.pro)
       for (let i = 0; i < this.projectiles.length; i++) {
-        this.projectiles[i].drawBaseball();
-        this.projectiles[i].moveBall();
-        this.player.update()
+        // if (this.frame % 2 === 0){
+          this.projectiles[i].drawBaseball();
+          this.projectiles[i].moveBall();
+
+        // }
       }
     }
   }

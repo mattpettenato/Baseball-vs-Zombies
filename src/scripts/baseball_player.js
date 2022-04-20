@@ -1,4 +1,5 @@
 const BASEBALLPLAYER = new Image()
+// BASEBALLPLAYER.src = '../../img/2x2ballplayer.png'
 BASEBALLPLAYER.src = '../../img/plswork_no_background.png'
 
 const board = document.getElementById('board');
@@ -24,9 +25,11 @@ export default class BaseballPlayer {
   update() {
     if (this.picX < this.maxFrame) this.picX++;
     else this.picX = this.minFrame;
+
   }
 
   drawPlayer() {
+    // console.log(this.picX)
     ctx.fillStyle = ('red');
     ctx.font = "12px Courier";
     // drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
