@@ -29,7 +29,7 @@ export default class BaseballPlayer {
   }
 
   drawPlayer() {
-    // console.log(this.picX)
+    
     ctx.fillStyle = ('red');
     ctx.font = "12px Courier";
     // drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
