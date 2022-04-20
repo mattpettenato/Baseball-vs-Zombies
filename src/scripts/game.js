@@ -5,7 +5,6 @@ import Board from './board.js';
 
 const board = document.getElementById('board');
 const ctx = board.getContext('2d');
-// const delay = ms => new Promise(res => setTimeout(res, ms));
 
 export default class Game {
   constructor() {
@@ -69,7 +68,7 @@ export default class Game {
   roundOver() {
     this.round = this.round + 1;
     this.numZombie = this.round * 4;
-    this.towerToken = this.towerToken + 1;
+    this.towerToken = this.towerToken + 2;
     this.zombie.increaseSpeed();
   }
 
@@ -115,13 +114,10 @@ export default class Game {
 
 
   stillBall() {
-    // console.log(this.projectiles)
     for (let i = 0; i < this.projectiles.length; i++) {
-      // console.log(this.projectiles[0]['x'])
       if ((this.projectiles[0]['x'] >= 900) && this.projectiles[i]) {
         this.projectiles.splice(i, 1);
       }
-
     }
   }
 
@@ -208,7 +204,7 @@ export default class Game {
         if (this.frame % 2 === 0) {
           this.player.team[i].throwing = true
         }
-        if (this.player.team[i].throwing && this.frame % 100 === 0 && this.frame % 2 === 0){
+        if ((this.player.team[i].throwing) && (this.frame % 100 === 0) && (this.frame % 2 === 0)){
           this.player.team[i].update();
           if (this.frame % 200 === 0){
             this.projectiles.push(new Projectile(this.player.team[i].x, this.player.team[i].y))

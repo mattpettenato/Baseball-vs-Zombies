@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 board.addEventListener('click', function(event) {
   const xPos = newGame.board.mouse['x'] - (newGame.board.mouse['x'] % newGame.board.unitSize);
   const yPos = newGame.board.mouse['y'] - (newGame.board.mouse['y'] % newGame.board.unitSize);
-  console.log(newGame.frame)
+  // console.log(newGame.frame)
   if (yPos < 100 || yPos > 500 || xPos < 100 || xPos > 800) return;
   for (let i = 0; i < newGame.player.team.length; i++) {
     if (newGame.player.team[i].x === xPos && newGame.player.team[i].y === yPos) return;
@@ -126,7 +126,7 @@ btn4.addEventListener('click', function (){
 });
 
 btn5.addEventListener('click', function (){
-  console.log(newGame.gameStatus)
+  // console.log(newGame.gameStatus)
   if (newGame.gameStatus === false){
     newGame.startGame();
     animate()
