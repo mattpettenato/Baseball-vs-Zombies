@@ -1,5 +1,7 @@
 body {
-  background-color: indianred;
+  /* background-color: indianred; */
+  background-color: rgb(5, 7, 23);
+
 }
 
 #header {
@@ -52,7 +54,10 @@ body {
 }
 
 #canvas2 {
-  background-color: indianred ;
+  /* background-color: indianred ;
+   */
+  background-color: rgb(5, 7, 23);
+
   position: absolute;
   top: 50px;
   bottom: 50px;
@@ -65,7 +70,9 @@ body {
 }
 
 #canvas3 {
-  background-color: indianred ;
+  /* background-color: indianred ; */
+  background-color: rgb(5, 7, 23);
+
   position: absolute;
   top: 50px;
   bottom: 50px;
