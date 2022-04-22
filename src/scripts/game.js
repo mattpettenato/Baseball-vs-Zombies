@@ -37,9 +37,11 @@ export default class Game {
   //test
   drawRound() {
   ctx.fillStyle = 'red';
-  ctx.font = "22px Courier";
+  ctx.font = "48px Courier";
   ctx.textAlign = "start";
-  ctx.fillText("Round: " + this.round, 300, 90)
+  // ctx.fillText("Round: " + this.round, 300, 90)
+  ctx.fillText("Round: " + this.round, 400, 90)
+
   }
 
   drawScore(){
@@ -154,7 +156,7 @@ export default class Game {
     ctx.fillText("Zombies: " + this.numZombie, 300, 670);
     ctx.fillText("Lives: " + this.lives, 500, 650)
     ctx.fillText("Score: " + this.score, 695, 650)
-    ctx.fillText("Round: " + this.round, 440, 90)
+    // ctx.fillText("Round: " + this.round, 440, 90)
     // ctx.fillText(this.zombies.length + " zombies arr", 700, 50);
     for (let i = 0; i < this.board.unitData.length; i++) {
       this.board.unitData[i].drawGrid(ctx);

@@ -39,7 +39,8 @@ board.addEventListener('mousemove', function (event) {
 function animate() {
   // console.log(gamePause)
   // console.log(newGame.lives)
-  newGame.drawTitle();
+  // newGame.drawTitle();
+  newGame.drawRound();
   newGame.drawCell(ctx);
   if (newGame.gameStatus === false) {
 
@@ -47,7 +48,9 @@ function animate() {
   }
   if (newGame.gameStatus === true) {
     ctx.clearRect(0, 0, board.width, board.height);
-    newGame.drawTitle();
+    // newGame.drawTitle();
+  newGame.drawRound();
+
     newGame.drawCell(ctx);
     newGame.drawTeam();
     newGame.drawEnemy();
@@ -68,7 +71,9 @@ function animate() {
       newGame.projectiles = [];
 
       // ctx.clearRect(0, 0, board.width, board.height);
-      newGame.drawTitle();
+      // newGame.drawTitle();
+  newGame.drawRound();
+
 
       newGame.drawEnd();
       // requestAnimationFrame(animate);
