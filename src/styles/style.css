@@ -51,6 +51,7 @@ body {
 
 #buttons button{
   width: 100px;
+  margin-bottom: 5px;
 }
 
 #canvas2 {
@@ -98,7 +99,7 @@ body {
 #linkers img{
   width: 74px;
   height: 64px;
-  margin-right: -10px;
+  /* margin-right: -10px; */
 }
 
 #git-link{
@@ -117,7 +118,7 @@ body {
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  padding-right: 100px;
+  /* padding-right: 100px; */
 }
 
 #gitts{
@@ -141,8 +142,19 @@ body {
 #holder {
   display: flex;
   align-items: center;
-  width: 1000px;
-  min-width: 1000px;
-  max-width: 1000px;
+  width: 990px;
+  min-width: 990px;
+  max-width: 990px;
   justify-content: space-between;
+}
+
+#title{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#title h1{
+  font-family: 'Press Start 2P', cursive;
+  color: white;
 }

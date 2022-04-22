@@ -18,6 +18,9 @@
   <!-- <link rel="stylesheet" href="./src/styles/style.css"> -->
   <!-- <script type="module" src="./src/index.js"></script> -->
   <link rel="shortcut icon" href="#">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> -->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -34,14 +37,10 @@
 
   <body>
     <div id="fullpage">
+      <div id="title">
+        <h1>Baseball vs. Zombies</h1>
+      </div>
       <div id="Games">
-                  <div id="buttons">
-                    <button style="z-index:2" id="btn5">Start Game</button>
-                    <button style="z-index:2" id="btn4">Pause Game</button>
-                    <button style="z-index:2" id="btn3">Restart Game</button>
-                    <button style="z-index:2" id="btn1">Start Music</button>
-                    <button style="z-index:2" id="btn2">Stop Music</button>
-                  </div>
         <canvas style="z-index:1" id="board"></canvas>
       </div>
       <div id="the-rest">
@@ -51,6 +50,17 @@
             <textarea readonly name="instruct" id="instruc" cols="28" rows="5"
             style="resize: none;">Click on the board to place baseball players. You can place one extra player per round. Do not let the zombies get past to the road.</textarea>
           </div>
+
+<div id="buttons">
+  <button style="z-index:2" id="btn5">Start Game</button>
+  <button style="z-index:2" id="btn4">Pause Game</button>
+  <button style="z-index:2" id="btn3">Restart Game</button>
+</div>
+<div id="buttons">
+  <button style="z-index:2" id="btn1">Start Music</button>
+  <button style="z-index:2" id="btn2">Stop Music</button>
+</div>
+
           <div id="links">
             <a id="gitts" style="z-index:2" href="https://github.com/mattpettenato/JavaScript_Project">
               <img src="./img/GitHub-Mark-Light-64px.png">
