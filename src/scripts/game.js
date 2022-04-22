@@ -40,7 +40,7 @@ export default class Game {
   ctx.font = "48px Courier";
   ctx.textAlign = "start";
   // ctx.fillText("Round: " + this.round, 300, 90)
-  ctx.fillText("Round: " + this.round, 400, 90)
+  ctx.fillText("Round:" + this.round, 400, 90)
 
   }
 
@@ -132,18 +132,20 @@ export default class Game {
 
   drawEnd(){
     ctx.fillStyle = ('red');
-    ctx.font = "30px Courier";
+    ctx.font = "42px Courier";
     ctx.textAlign = "start";
-    ctx.fillText("Your Score: " + this.score, 380, 200)
-    ctx.fillText('PRESS RESTART TO PlAY AGAIN', 260, 300);
+    ctx.fillText("Your Score: " + this.score, 338, 200)
+    ctx.fillText('PRESS RESTART', 337, 300);
+    ctx.fillText('TO', 475, 340);
+    ctx.fillText('PlAY AGAIN', 375, 380);
 ;
   }
 
   drawPAUSE() {
     ctx.fillStyle = ('red');
-    ctx.font = "30px Courier";
+    ctx.font = "42px Courier";
     ctx.textAlign = "start";
-    ctx.fillText('PRESS START TO BEGIN', 320, 300);
+    ctx.fillText('PRESS START TO PLAY', 262, 300);
   }
 
   drawCell(ctx) {
