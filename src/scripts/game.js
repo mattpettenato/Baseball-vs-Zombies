@@ -137,7 +137,7 @@ export default class Game {
     ctx.fillText("Your Score: " + this.score, 338, 200)
     ctx.fillText('PRESS RESTART', 337, 300);
     ctx.fillText('TO', 475, 340);
-    ctx.fillText('PlAY AGAIN', 375, 380);
+    ctx.fillText('PLAY AGAIN', 375, 380);
 ;
   }
 

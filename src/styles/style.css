@@ -52,6 +52,7 @@ body {
 #buttons button{
   width: 100px;
   margin-bottom: 5px;
+  border-radius: 8px;
 }
 
 #canvas2 {
@@ -146,6 +147,7 @@ body {
   min-width: 1000px;
   max-width: 1000px;
   justify-content: space-between;
+  margin-top: 10px;
 }
 
 #title{
