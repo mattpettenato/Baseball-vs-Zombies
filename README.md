@@ -1,12 +1,12 @@
-# Baseball vs. Football
+# Baseball vs. Zombies
 
 LIVE: https://mattpettenato.github.io/JavaScript_Project-Baseball-vs.-Zombies/
 
 ## Background
-My Baseball vs. Football game is inspired from the popular Plants vs. Zombies from PopCap Games. It is similar to other games of the 2D tower defense genre. The game will have a theme of baseball players versus football players. The user is able to place down their own towers on the game board and will be able to engage in combat with enemy characters. The goal of the game is to build the strongest team possible in order to overcome each round of incoming enemies. The player will have 5 lives, and every friendly tower will have X amount of health points. The enemies will travel across the game board towards the users team at different speeds. The enemies will have 15-20 health points and will cause damage when they strike a friendly tower, eventually defeating the tower if not stopped. If the enemy touches the home base, then a life will be subtracted. Once the user's lives reach zero, they will be defeated. After every successful round, the difficult will increase in the form of more enemies travelling at an increased speed. 
+My Baseball vs. Baseball game is inspired from the popular Plants vs. Zombies from PopCap Games. It is similar to other games of the 2D tower defense genre. The game will have a theme of baseball players versus zombies. The user is able to place down their own towers on the game board and will be able to engage in combat with enemy characters. The goal of the game is to build the strongest team possible in order to overcome each round of incoming enemies. The player will have 5 lives, and every friendly tower will have X amount of health points. The enemies will travel across the game board towards the users team at different speeds. The enemies will have 15-20 health points and will cause damage when they strike a friendly tower, eventually defeating the tower if not stopped. If the enemy touches the home base, then a life will be subtracted. Once the user's lives reach zero, they will be defeated. After every successful round, the difficult will increase in the form of more enemies travelling at an increased speed. 
 
 ## Functionality & MVPs
-In Baseball vs. Football, the user will be able to:
+In Baseball vs. Zombies, the user will be able to:
 * Use their mouse to select baseball players and drop them on a position on the game board
 * Determine their best strategy and react to the incoming enemies
 * Monitor their lives remaining and their tower's remaining lives.
